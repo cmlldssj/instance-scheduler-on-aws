@@ -1,0 +1,38 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "instance_scheduler_cli"
+version = "1.5.3"
+description = "Instance Scheduler on AWS CLI"
+license = "Apache-2.0"
+authors = ["Amazon Web Services"]
+homepage = "https://aws.amazon.com/solutions/implementations/instance-scheduler-on-aws/"
+repository = "https://github.com/aws-solutions/instance-scheduler-on-aws"
+documentation = "https://docs.aws.amazon.com/solutions/latest/instance-scheduler-on-aws/solution-overview.html"
+
+[tool.poetry.scripts]
+scheduler-cli = "instance_scheduler_cli:__main__"
+
+[tool.poetry.dependencies]
+python = "^3.8.1"
+boto3 = "^1.26.90"
+jmespath = "^1.0.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+boto3-stubs-lite = {extras = ["cloudformation", "lambda"], version = "^1.26.90"}
+cli-test-helpers = "^3.4.0"
+flake8 = "^6.1.0"
+isort = "^5.12.0"
+# held back, 4.18.0 is a breaking change
+jsonschema = "~4.17.3"
+moto = {extras = ["cloudformation", "lambda"], version = "^4.2.4"}
+mypy = "^1.5.1"
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
+types-jmespath = "^1.0.1"
+types-requests = "2.31.0.6"

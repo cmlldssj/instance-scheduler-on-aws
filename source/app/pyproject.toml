@@ -1,0 +1,45 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: Apache-2.0
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "instance_scheduler"
+version = "1.5.3"
+description = "Instance Scheduler on AWS"
+license = "Apache-2.0"
+authors = ["Amazon Web Services"]
+homepage = "https://aws.amazon.com/solutions/implementations/instance-scheduler-on-aws/"
+repository = "https://github.com/aws-solutions/instance-scheduler-on-aws"
+documentation = "https://docs.aws.amazon.com/solutions/latest/instance-scheduler-on-aws/solution-overview.html"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.31.0"
+typing-extensions = "^4.8.0"
+
+[tool.poetry.group.dev.dependencies]
+aws-lambda-powertools = "^2.25.1"
+black = "^23.9.1"
+boto3 = "1.26.90"
+boto3-stubs-lite = {extras = ["cloudwatch", "dynamodb", "ec2", "lambda", "logs", "rds", "resourcegroupstaggingapi", "sns", "ssm", "sts"], version = "1.26.90"}
+botocore = "1.29.90"
+flake8 = "^6.1.0"
+freezegun = "^1.2.2"
+isort = "^5.12.0"
+jmespath = "1.0.1"
+pytest = "^7.4.2"
+pytest-cov = "^4.1.0"
+pytest-mock = "^3.11.1"
+pytest-runner = "^6.0.0"
+pytest-xdist = "^3.3.1"
+python-dateutil = "2.8.2"
+moto = {extras = ["dynamodb", "ec2", "logs", "rds", "resourcegroupstaggingapi", "ssm"], version = "^4.2.4"}
+mypy = "^1.5.1"
+tox = "^4.11.3"
+types-freezegun = "^1.1.10"
+types-jmespath = "1.0.1"
+types-python-dateutil = "2.8.2"
+types-requests = "2.31.0.6"
+tzdata = "^2023.3"
